@@ -1,0 +1,6 @@
+<%= turbo_stream.append "comments" do %>
+  <%= render @comments %>
+<% end %>
+<%= turbo_stream.update "load_more" do %>
+  <%= render partial: "load_more" %>
+<% end %>

@@ -5,7 +5,11 @@ class CommentsController < ApplicationController
 
   # GET /comments or /comments.json
   def index
-    @pagy, @comments = pagy(:offset, Comment.order(created_at: :desc), limit: 5)
+    @pagy, @comments = pagy(:offset, Comment.order(created_at: :desc), limit: 10)
+    respond_to do |format|
+      format.html
+      format.turbo_stream { }
+    end
   end
 
   # GET /comments/1 or /comments/1.json
