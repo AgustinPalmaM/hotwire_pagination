@@ -65,3 +65,5 @@ end
 gem "tailwindcss-rails", "~> 4.4"
 
 gem "faker", "~> 3.5"
+
+gem "pagy", "~> 43.1"
