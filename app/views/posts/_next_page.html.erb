@@ -1,0 +1,3 @@
+<% if @pagy.next %>
+  <%= turbo_frame_tag "posts-page-#{@pagy.next}", src: posts_path(page: @pagy.next), loading: :lazy  %>
+<% end %>
