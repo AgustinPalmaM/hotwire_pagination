@@ -1,10 +1,16 @@
 <div id="<%= dom_id post %>" class="w-full sm:w-auto my-5 space-y-5">
-  <div>
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= post.title %>
+  <div class="flex gap-10">
+    <div>
+      <strong class="block font-medium mb-1">ID:</strong>
+      <%= post.id %>
+    </div>
+    <div>
+      <strong class="block font-medium mb-1">Title:</strong>
+      <%= post.title %>
+    </div>
   </div>
   <div>
     <strong class="block font-medium mb-1">Image url:</strong>
-    <%= post.image_url %>
+    <%= image_tag(post.image_url, class:"max-w-1/3") %>
   </div>
 </div>
