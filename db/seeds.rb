@@ -8,7 +8,12 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+Comment.delete_all
+Post.delete_all
+Artist.delete_all
+
 100.times do
   Comment.create(body: Faker::Quote.famous_last_words)
   Post.create(title: Faker::Music.band, image_url: Faker::Avatar.image)
+  Artist.create(name: Faker::Artist.name)
 end
